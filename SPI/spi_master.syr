@@ -1,0 +1,500 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Reading design: spi_master.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "spi_master.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "spi_master"
+Output Format                      : NGC
+Target Device                      : xc6slx45t-3-fgg484
+
+---- Source Options
+Top Module Name                    : spi_master
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "D:\Work Zone\Your Own Projects\SPI\Meta_Harden.v" into library work
+Parsing module <meta_harden>.
+Analyzing Verilog file "D:\Work Zone\Your Own Projects\SPI\clk_divider.v" into library work
+Parsing module <clk_divider>.
+Analyzing Verilog file "D:\Work Zone\Your Own Projects\SPI\Buffer.v" into library work
+Parsing module <buffer>.
+Analyzing Verilog file "D:\Work Zone\Your Own Projects\SPI\SPI_MASTER.v" into library work
+Parsing module <spi_master>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <spi_master>.
+
+Elaborating module <clk_divider>.
+WARNING:HDLCompiler:413 - "D:\Work Zone\Your Own Projects\SPI\clk_divider.v" Line 38: Result of 32-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "D:\Work Zone\Your Own Projects\SPI\clk_divider.v" Line 43: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "D:\Work Zone\Your Own Projects\SPI\clk_divider.v" Line 44: Result of 32-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "D:\Work Zone\Your Own Projects\SPI\clk_divider.v" Line 48: Result of 5-bit expression is truncated to fit in 4-bit target.
+
+Elaborating module <meta_harden>.
+
+Elaborating module <buffer>.
+WARNING:HDLCompiler:413 - "D:\Work Zone\Your Own Projects\SPI\SPI_MASTER.v" Line 105: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "D:\Work Zone\Your Own Projects\SPI\SPI_MASTER.v" Line 116: Result of 32-bit expression is truncated to fit in 3-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <spi_master>.
+    Related source file is "D:\Work Zone\Your Own Projects\SPI\SPI_MASTER.v".
+    Found 2-bit register for signal <current_state>.
+    Found 1-bit register for signal <MOSI>.
+    Found 3-bit register for signal <TX_bit_count>.
+    Found 8-bit register for signal <rx_byte>.
+    Found 3-bit register for signal <RX_bit_count>.
+    Found finite state machine <FSM_0> for signal <current_state>.
+    -----------------------------------------------------------------------
+    | States             | 2                                              |
+    | Transitions        | 4                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 2                                              |
+    | Clock              | i_clk (rising_edge)                            |
+    | Reset              | reset (positive)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 3-bit subtractor for signal <GND_1_o_GND_1_o_sub_16_OUT<2:0>> created at line 105.
+    Found 3-bit subtractor for signal <GND_1_o_GND_1_o_sub_23_OUT<2:0>> created at line 116.
+    Found 1-bit 8-to-1 multiplexer for signal <TX_bit_count[2]_r_TX_Byte[7]_Mux_14_o> created at line 104.
+WARNING:Xst:737 - Found 1-bit latch for signal <ss>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  15 D-type flip-flop(s).
+	inferred   1 Latch(s).
+	inferred   9 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <spi_master> synthesized.
+
+Synthesizing Unit <clk_divider>.
+    Related source file is "D:\Work Zone\Your Own Projects\SPI\clk_divider.v".
+        clks_per_half_bit = 2
+        clk_idle_state = 1
+    Found 1-bit register for signal <out_clk>.
+    Found 1-bit register for signal <data_ready>.
+    Found 1-bit register for signal <trailing_edge>.
+    Found 1-bit register for signal <leading_edge>.
+    Found 5-bit register for signal <edges_num>.
+    Found 4-bit register for signal <clks_count>.
+    Found 4-bit adder for signal <clks_count[3]_GND_2_o_add_8_OUT> created at line 48.
+    Found 5-bit subtractor for signal <GND_2_o_GND_2_o_sub_8_OUT<4:0>> created at line 44.
+    Found 5-bit comparator lessequal for signal <GND_2_o_edges_num[4]_LessThan_3_o> created at line 33
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  13 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <clk_divider> synthesized.
+
+Synthesizing Unit <meta_harden>.
+    Related source file is "D:\Work Zone\Your Own Projects\SPI\Meta_Harden.v".
+        clk_idle_state = 1
+    Found 1-bit register for signal <o_spi_clk>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <meta_harden> synthesized.
+
+Synthesizing Unit <buffer>.
+    Related source file is "D:\Work Zone\Your Own Projects\SPI\Buffer.v".
+        width = 8
+    Found 8-bit register for signal <r_byte>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <buffer> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 4
+ 3-bit subtractor                                      : 2
+ 4-bit adder                                           : 1
+ 5-bit subtractor                                      : 1
+# Registers                                            : 12
+ 1-bit register                                        : 6
+ 3-bit register                                        : 2
+ 4-bit register                                        : 1
+ 5-bit register                                        : 1
+ 8-bit register                                        : 2
+# Latches                                              : 1
+ 1-bit latch                                           : 1
+# Comparators                                          : 1
+ 5-bit comparator lessequal                            : 1
+# Multiplexers                                         : 11
+ 1-bit 2-to-1 multiplexer                              : 10
+ 1-bit 8-to-1 multiplexer                              : 1
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <clk_divider>.
+The following registers are absorbed into counter <clks_count>: 1 register on signal <clks_count>.
+The following registers are absorbed into counter <edges_num>: 1 register on signal <edges_num>.
+Unit <clk_divider> synthesized (advanced).
+
+Synthesizing (advanced) Unit <spi_master>.
+The following registers are absorbed into counter <TX_bit_count>: 1 register on signal <TX_bit_count>.
+The following registers are absorbed into counter <RX_bit_count>: 1 register on signal <RX_bit_count>.
+Unit <spi_master> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 4
+ 3-bit down counter                                    : 2
+ 4-bit up counter                                      : 1
+ 5-bit down counter                                    : 1
+# Registers                                            : 22
+ Flip-Flops                                            : 22
+# Comparators                                          : 1
+ 5-bit comparator lessequal                            : 1
+# Multiplexers                                         : 11
+ 1-bit 2-to-1 multiplexer                              : 10
+ 1-bit 8-to-1 multiplexer                              : 1
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <current_state[1:1]> with sequential encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 0
+ 01    | 1
+-------------------
+WARNING:Xst:1294 - Latch <ss> is equivalent to a wire in block <spi_master>.
+
+Optimizing unit <buffer> ...
+
+Optimizing unit <spi_master> ...
+
+Optimizing unit <clk_divider> ...
+WARNING:Xst:1293 - FF/Latch <clk/clks_count_3> has a constant value of 0 in block <spi_master>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk/clks_count_2> has a constant value of 0 in block <spi_master>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block spi_master, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 36
+ Flip-Flops                                            : 36
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : spi_master.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 36
+#      INV                         : 1
+#      LUT2                        : 5
+#      LUT3                        : 3
+#      LUT4                        : 4
+#      LUT5                        : 11
+#      LUT6                        : 11
+#      VCC                         : 1
+# FlipFlops/Latches                : 36
+#      FD                          : 4
+#      FDC                         : 11
+#      FDE                         : 14
+#      FDP                         : 2
+#      FDR                         : 2
+#      FDRE                        : 2
+#      FDSE                        : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 24
+#      IBUF                        : 11
+#      OBUF                        : 13
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx45tfgg484-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              36  out of  54576     0%  
+ Number of Slice LUTs:                   35  out of  27288     0%  
+    Number used as Logic:                35  out of  27288     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     42
+   Number with an unused Flip Flop:       6  out of     42    14%  
+   Number with an unused LUT:             7  out of     42    16%  
+   Number of fully used LUT-FF pairs:    29  out of     42    69%  
+   Number of unique control sets:         7
+
+IO Utilization: 
+ Number of IOs:                          26
+ Number of bonded IOBs:                  25  out of    296     8%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+i_clk                              | BUFGP                  | 36    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 2.819ns (Maximum Frequency: 354.685MHz)
+   Minimum input arrival time before clock: 4.980ns
+   Maximum output required time after clock: 4.419ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'i_clk'
+  Clock period: 2.819ns (frequency: 354.685MHz)
+  Total number of paths / destination ports: 161 / 45
+-------------------------------------------------------------------------
+Delay:               2.819ns (Levels of Logic = 2)
+  Source:            clk/edges_num_4 (FF)
+  Destination:       clk/out_clk (FF)
+  Source Clock:      i_clk rising
+  Destination Clock: i_clk rising
+
+  Data Path: clk/edges_num_4 to clk/out_clk
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDSE:C->Q             6   0.447   1.089  clk/edges_num_4 (clk/edges_num_4)
+     LUT5:I0->O            7   0.203   0.774  clk/GND_2_o_INV_10_o1 (clk/GND_2_o_INV_10_o)
+     LUT4:I3->O            1   0.205   0.000  clk/edges_num_0_rstpot (clk/edges_num_0_rstpot)
+     FDR:D                     0.102          clk/edges_num_0
+    ----------------------------------------
+    Total                      2.819ns (0.957ns logic, 1.862ns route)
+                                       (33.9% logic, 66.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'i_clk'
+  Total number of paths / destination ports: 73 / 60
+-------------------------------------------------------------------------
+Offset:              4.980ns (Levels of Logic = 4)
+  Source:            reset (PAD)
+  Destination:       clk/clks_count_1 (FF)
+  Destination Clock: i_clk rising
+
+  Data Path: reset to clk/clks_count_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            31   1.222   1.382  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            1   0.203   0.944  clk/GND_2_o_INV_10_o1_SW0 (N4)
+     LUT6:I0->O            2   0.203   0.721  clk/_n009011 (clk/_n00901)
+     LUT6:I4->O            1   0.203   0.000  clk/clks_count_1_rstpot (clk/clks_count_1_rstpot)
+     FD:D                      0.102          clk/clks_count_1
+    ----------------------------------------
+    Total                      4.980ns (1.933ns logic, 3.047ns route)
+                                       (38.8% logic, 61.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'i_clk'
+  Total number of paths / destination ports: 12 / 12
+-------------------------------------------------------------------------
+Offset:              4.419ns (Levels of Logic = 2)
+  Source:            current_state_FSM_FFd1 (FF)
+  Destination:       ss (PAD)
+  Source Clock:      i_clk rising
+
+  Data Path: current_state_FSM_FFd1 to ss
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.447   0.616  current_state_FSM_FFd1 (current_state_FSM_FFd1)
+     INV:I->O              1   0.206   0.579  current_state_current_state[1]_GND_1_o_equal_7_o1_INV_0 (ss_OBUF)
+     OBUF:I->O                 2.571          ss_OBUF (ss)
+    ----------------------------------------
+    Total                      4.419ns (3.224ns logic, 1.195ns route)
+                                       (73.0% logic, 27.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock i_clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+i_clk          |    2.819|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 6.54 secs
+ 
+--> 
+
+Total memory usage is 4495576 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   10 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

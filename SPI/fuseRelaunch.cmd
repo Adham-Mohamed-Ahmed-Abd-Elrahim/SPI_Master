@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "D:/Work Zone/Your Own Projects/SPI/SPI/spi_master_isim_beh.exe" -prj "D:/Work Zone/Your Own Projects/SPI/SPI/spi_master_beh.prj" "work.spi_master" "work.glbl" 

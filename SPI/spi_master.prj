@@ -1,0 +1,4 @@
+verilog work "../Meta_Harden.v"
+verilog work "../clk_divider.v"
+verilog work "../Buffer.v"
+verilog work "../SPI_MASTER.v"
