@@ -12,10 +12,10 @@ module clk_divider
 reg [4:0] edges_num;//there is 16 edge in 8 bits 
 reg [clks_per_half_bit*2-1:0] clks_count;
 initial begin
-edges_num<=16;
-clks_count<=0;
-out_clk<=clk_idle_state;
-data_ready<=0;
+edges_num=16;
+clks_count=0;
+out_clk=clk_idle_state;
+data_ready=0;
 end
 always @ (posedge clk,posedge (reset))begin
 if(reset==1)begin

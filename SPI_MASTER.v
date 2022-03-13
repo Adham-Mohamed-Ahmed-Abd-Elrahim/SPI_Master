@@ -79,19 +79,19 @@ begin
 case(current_state)
 //idle state and ready to transmit
 idle_state:begin
-ss<=1'b1;
-next_state<=(TX_DV==1'b1) ? Transrecieving:idle_state; //TX_DV for one cycle
+ss=1'b1;
+next_state=(TX_DV==1'b1) ? Transrecieving:idle_state; //TX_DV for one cycle
 end
 
 Transrecieving:begin
 ss<=1'b0;
 if (transrecieve==1)
-next_state<=idle_state;
+next_state=idle_state;
 else
-next_state<=Transrecieving;
+next_state=Transrecieving;
 end
 default:begin
-next_state<=idle_state;
+next_state=idle_state;
 end
 endcase
 end

@@ -50,7 +50,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="spi_master.unroutes" xil_pn:subbranch="Par"/>
     <file xil_pn:fileType="FILE_XPI" xil_pn:name="spi_master.xpi"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="spi_master.xst"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="spi_master_beh.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="spi_master_beh.prj"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="spi_master_envsettings.html"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="spi_master_guide.ncd" xil_pn:origination="imported"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="spi_master_isim_beh.exe"/>
@@ -81,6 +81,10 @@
     <transform xil_pn:end_ts="1637939077" xil_pn:in_ck="-1308498979648199099" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1637939077">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="../Buffer.v"/>
       <outfile xil_pn:name="../Meta_Harden.v"/>
       <outfile xil_pn:name="../SPI_MASTER.v"/>
@@ -101,6 +105,11 @@
     <transform xil_pn:end_ts="1637939077" xil_pn:in_ck="-1308498979648199099" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1637939077">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="../Buffer.v"/>
       <outfile xil_pn:name="../Meta_Harden.v"/>
       <outfile xil_pn:name="../SPI_MASTER.v"/>
@@ -109,6 +118,11 @@
     <transform xil_pn:end_ts="1637939082" xil_pn:in_ck="-1308498979648199099" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-409911676833751301" xil_pn:start_ts="1637939077">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="spi_master_beh.prj"/>
@@ -118,6 +132,9 @@
     <transform xil_pn:end_ts="1637939082" xil_pn:in_ck="7488063170524095366" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="6728864235726500638" xil_pn:start_ts="1637939082">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="spi_master_isim_beh.wdb"/>
     </transform>
@@ -148,13 +165,11 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1637938859" xil_pn:in_ck="-1308498979648199099" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-6581143228754133346" xil_pn:start_ts="1637938848">
+    <transform xil_pn:end_ts="1637943363" xil_pn:in_ck="-1308498979648199099" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-6581143228754133346" xil_pn:start_ts="1637943354">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="spi_master.lso"/>
@@ -164,6 +179,7 @@
       <outfile xil_pn:name="spi_master.stx"/>
       <outfile xil_pn:name="spi_master.syr"/>
       <outfile xil_pn:name="spi_master.xst"/>
+      <outfile xil_pn:name="spi_master_beh.prj"/>
       <outfile xil_pn:name="spi_master_xst.xrpt"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
@@ -172,20 +188,20 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1637938866" xil_pn:in_ck="-8245445655870935907" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-1073258151332972976" xil_pn:start_ts="1637938859">
+    <transform xil_pn:end_ts="1637943370" xil_pn:in_ck="-8245445655870935907" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-1073258151332972976" xil_pn:start_ts="1637943363">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
       <outfile xil_pn:name="spi_master.bld"/>
       <outfile xil_pn:name="spi_master.ngd"/>
       <outfile xil_pn:name="spi_master_ngdbuild.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1637938885" xil_pn:in_ck="-8245445655870935906" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="4807565132092422995" xil_pn:start_ts="1637938866">
+    <transform xil_pn:end_ts="1637943385" xil_pn:in_ck="-8245445655870935906" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="4807565132092422995" xil_pn:start_ts="1637943370">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
       <outfile xil_pn:name="spi_master.pcf"/>
       <outfile xil_pn:name="spi_master_map.map"/>
@@ -196,10 +212,9 @@
       <outfile xil_pn:name="spi_master_summary.xml"/>
       <outfile xil_pn:name="spi_master_usage.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1637938908" xil_pn:in_ck="5855122740538530487" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="3214117756270688487" xil_pn:start_ts="1637938885">
+    <transform xil_pn:end_ts="1637943405" xil_pn:in_ck="5855122740538530487" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="3214117756270688487" xil_pn:start_ts="1637943385">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
       <outfile xil_pn:name="spi_master.ncd"/>
       <outfile xil_pn:name="spi_master.pad"/>
@@ -211,10 +226,9 @@
       <outfile xil_pn:name="spi_master_pad.txt"/>
       <outfile xil_pn:name="spi_master_par.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1637938908" xil_pn:in_ck="-8245445655870936038" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1637938899">
+    <transform xil_pn:end_ts="1637943405" xil_pn:in_ck="-8245445655870936038" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1637943398">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
       <outfile xil_pn:name="spi_master.twr"/>
       <outfile xil_pn:name="spi_master.twx"/>
