@@ -27,8 +27,8 @@ reg [2:0] TX_bit_count;//8 counts
 reg [2:0] RX_bit_count;//8 counts
 wire [7:0] r_TX_Byte;
 initial begin
-TX_bit_count<=3'b111;
-RX_bit_count<=3'b111;
+TX_bit_count=3'b111;
+RX_bit_count=3'b111;
 end
 //transmission
 //wire transrecieve ; //gives one when transreciving is finsihed
